@@ -74,7 +74,10 @@ crashlytics-build.properties
 # Mac being Mac
 .DS_Store
 
+# Imported Assets
 Assets/Asset Unlock - 2D Prototyping/*
 Assets/Asset Unlock - 2D Prototyping.meta
 Assets/Brackeys/*
 Assets/Brackeys.meta
+Assets/Scripts/CharacterController2D.cs
+Assets/Scripts/CharacterController2D.cs.meta
