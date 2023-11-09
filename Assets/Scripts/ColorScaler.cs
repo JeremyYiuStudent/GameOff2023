@@ -8,9 +8,12 @@ public class ColorScaler : MonoBehaviour
     public float timePerTick = 1f;
     private bool colorToneCountDown = true;
     private float greyScale = 1f;
+
+    private Animator animator;
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -20,7 +23,6 @@ public class ColorScaler : MonoBehaviour
             greyScale-=changePerTick;
             updateGreyScale();
             StartCoroutine(colorCountDown(timePerTick));
-            Debug.Log("Current multiplier is at: " + greyScale);
         }
     }
     IEnumerator colorCountDown(float x){
