@@ -29,7 +29,6 @@ public class ColorMixer : MonoBehaviour
             if(GUI.Button(new Rect(100,0,100,30), "Red")){
                 if(holder == 0){holder = 1;}
                 else{
-                    Debug.Log(text);
                     text.text = colorTable[holder*1-1];
                     holder = 0; mixerUp = false;
                 }
@@ -37,7 +36,6 @@ public class ColorMixer : MonoBehaviour
             if(GUI.Button(new Rect(200,0,100,30), "Green")){
                 if(holder == 0){holder = 2;}
                 else{
-                    Debug.Log(text);
                     text.text = colorTable[holder*2-1];
                     holder = 0; mixerUp = false;
                 }
@@ -46,7 +44,6 @@ public class ColorMixer : MonoBehaviour
                 if(holder == 0){holder = 3;}
                 else{
                     text.text = colorTable[holder*3-1];
-                    Debug.Log(text);
                     holder = 0; mixerUp = false;
                 }
             }
