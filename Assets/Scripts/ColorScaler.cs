@@ -35,7 +35,6 @@ public class ColorScaler : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
-        Debug.Log("Bump");
         greyScale = 1;
     }
 }
