@@ -26,8 +26,6 @@ public class DialogueController : ActionTrigger
         else{loadDialogue();}
     }
     private void loadDialogue(){
-        Debug.Log(dialogueText);
-        Debug.Log(speakerText);
         dialogueText.GetComponent<TextMeshProUGUI>().text = myDialogue.lines[index].text;
         speakerText.GetComponent<TextMeshProUGUI>().text = myDialogue.lines[index].speaker;
     }

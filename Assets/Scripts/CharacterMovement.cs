@@ -33,6 +33,9 @@ public class CharacterMovement : MonoBehaviour
                 }
                 break;
             case controlStatus.readMenu:
+                if(Input.GetButtonDown("Interact")){
+                    trigger.Deactivate();
+                }
                 break;
         }
     }
