@@ -40,8 +40,10 @@ public class CharacterMovement : MonoBehaviour
         }
     }
     void FixedUpdate(){
-        controller.Move(horizontalInput * Time.fixedDeltaTime,false,jumping);
-        jumping = false;
+        if(currentStatus == controlStatus.movement){
+            controller.Move(horizontalInput * Time.fixedDeltaTime,false,jumping);
+            jumping = false;
+        }
     }
     void OnTriggerEnter2D(Collider2D col){
         Debug.Log("Trigger");
