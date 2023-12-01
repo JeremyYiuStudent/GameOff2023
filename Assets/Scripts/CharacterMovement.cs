@@ -37,6 +37,10 @@ public class CharacterMovement : MonoBehaviour
                 {
                     this.gameObject.GetComponent<ColorMixer>().Activate();
                 }
+                if (Input.GetMouseButtonDown(0) && DataHolder.canDash)
+                {
+                    dashing = true;
+                }
                 break;
             case controlStatus.dialogue:
                 if (Input.GetButtonDown("Interact"))
@@ -50,10 +54,6 @@ public class CharacterMovement : MonoBehaviour
                     trigger.Deactivate();
                 }
                 break;
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            dashing = true;
         }
     }
     void FixedUpdate()
