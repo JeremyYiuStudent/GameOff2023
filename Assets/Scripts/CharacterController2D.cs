@@ -44,18 +44,12 @@ public class CharacterController2D : MonoBehaviour
 
 		animator = GetComponent<Animator>();
 
-		// Get the DoubleJump script attached to the same GameObject
+		// doublejump attached to game object
         doubleJump = GetComponent<DoubleJump>();
-	}
 
-	private void Update(){
-		animator.SetBool("grounded", m_Grounded);
-        animator.SetFloat("velocityX", Mathf.Abs(m_Velocity.x));
-		
-        if (m_Grounded)
+		 if (doubleJump == null)
         {
-            // Reset jumps when grounded
-            doubleJump.ResetJumps();
+            Debug.LogError("DoubleJump script not found on the player GameObject.");
         }
 	}
 
@@ -66,8 +60,15 @@ public class CharacterController2D : MonoBehaviour
 		}else{
         	animator.SetFloat("velocityX", 0);
 		}
+		if (m_Grounded)
+        {
+            // reset jump when grounded
+            doubleJump.ResetJumps();
+        }
+		
 	}
 
+	
 	private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
@@ -87,6 +88,7 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
+	
 	public void Move(float move, bool crouch, bool jump)
 	{
 		if (jump)
@@ -94,9 +96,6 @@ public class CharacterController2D : MonoBehaviour
             // Call the TryJump method in the DoubleJump script
             doubleJump.TryJump(m_Rigidbody2D);
         }
-
-	public void Move(float move, bool crouch, bool jump)
-	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
 		{
@@ -106,7 +105,6 @@ public class CharacterController2D : MonoBehaviour
 				crouch = true;
 			}
 		}
-
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
