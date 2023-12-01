@@ -59,6 +59,15 @@ public class CharacterController2D : MonoBehaviour
         }
 	}
 
+	private void Update(){
+		if(CharacterMovement.currentStatus == CharacterMovement.controlStatus.movement){
+			animator.SetBool("grounded", m_Grounded);
+        	animator.SetFloat("velocityX", Mathf.Abs(m_Velocity.x));
+		}else{
+        	animator.SetFloat("velocityX", 0);
+		}
+	}
+
 	private void FixedUpdate()
 	{
 		bool wasGrounded = m_Grounded;
@@ -78,7 +87,6 @@ public class CharacterController2D : MonoBehaviour
 		}
 	}
 
-	asdifobaoidbf
 	public void Move(float move, bool crouch, bool jump)
 	{
 		if (jump)
@@ -86,6 +94,9 @@ public class CharacterController2D : MonoBehaviour
             // Call the TryJump method in the DoubleJump script
             doubleJump.TryJump(m_Rigidbody2D);
         }
+
+	public void Move(float move, bool crouch, bool jump)
+	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
 		{
@@ -95,6 +106,7 @@ public class CharacterController2D : MonoBehaviour
 				crouch = true;
 			}
 		}
+
 		//only control the player if grounded or airControl is turned on
 		if (m_Grounded || m_AirControl)
 		{
