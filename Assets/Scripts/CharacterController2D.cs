@@ -33,7 +33,6 @@ public class CharacterController2D : MonoBehaviour
 	private bool m_wasCrouching = false;
 
 	private Animator animator;
-	private DoubleJump doubleJump;
 	private void Awake()
 	{
 		m_Rigidbody2D = GetComponent<Rigidbody2D>();
@@ -45,14 +44,6 @@ public class CharacterController2D : MonoBehaviour
 			OnCrouchEvent = new BoolEvent();
 
 		animator = GetComponent<Animator>();
-
-		// doublejump attached to game object
-        doubleJump = GetComponent<DoubleJump>();
-
-		 if (doubleJump == null)
-        {
-            Debug.LogError("DoubleJump script not found on the player GameObject.");
-        }
 	}
 
 	private void Update(){
@@ -62,11 +53,6 @@ public class CharacterController2D : MonoBehaviour
 		}else{
         	animator.SetFloat("velocityX", 0);
 		}
-		if (m_Grounded)
-        {
-            // reset jump when grounded
-            doubleJump.ResetJumps();
-        }
 		
 	}
 
@@ -83,7 +69,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-				jumpCounter = 2;
+				jumpCounter = 1;
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
@@ -94,11 +80,6 @@ public class CharacterController2D : MonoBehaviour
 	
 	public void Move(float move, bool crouch, bool jump)
 	{
-		if (jump)
-        {
-            // Call the TryJump method in the DoubleJump script
-            doubleJump.TryJump(m_Rigidbody2D);
-        }
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
 		{
