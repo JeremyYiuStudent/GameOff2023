@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UIElements.Experimental;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class CharacterMovement : MonoBehaviour
     public CharacterController2D controller;
     private float horizontalInput;
     private bool jumping = false;
+    private bool dashing = false;
     private ActionTrigger trigger;
 
     public GameObject triggerHint;
@@ -43,11 +45,16 @@ public class CharacterMovement : MonoBehaviour
                 }
                 break;
         }
+        if (Input.GetMouseButtonDown(0))
+        {
+            dashing = true;
+        }
     }
     void FixedUpdate(){
         if(currentStatus == controlStatus.movement){
-            controller.Move(horizontalInput * Time.fixedDeltaTime,false,jumping);
+            controller.Move(horizontalInput * Time.fixedDeltaTime,false,jumping,dashing);
             jumping = false;
+            dashing = false;
         }
     }
     void OnTriggerEnter2D(Collider2D col){

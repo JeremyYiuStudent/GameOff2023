@@ -4,8 +4,10 @@ using UnityEngine.Events;
 public class CharacterController2D : MonoBehaviour
 {
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
-	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
-	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
+	[Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;          // Amount of maxSpeed applied to crouching movement. 1 = 100%
+    [SerializeField] private float m_DashSpeed = 700f;
+    [SerializeField] private int m_DashLimit = 1;
+    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
 	[SerializeField] private bool m_AirControl = false;							// Whether or not a player can steer while jumping;
 	[SerializeField] private LayerMask m_WhatIsGround;							// A mask determining what is ground to the character
 	[SerializeField] private Transform m_GroundCheck;							// A position marking where to check if the player is grounded.
@@ -15,7 +17,8 @@ public class CharacterController2D : MonoBehaviour
 	const float k_GroundedRadius = .2f; // Radius of the overlap circle to determine if grounded
 	private bool m_Grounded;            // Whether or not the player is grounded.
 	const float k_CeilingRadius = .2f; // Radius of the overlap circle to determine if the player can stand up
-	private Rigidbody2D m_Rigidbody2D;
+    private int m_DashCount = 0;
+    private Rigidbody2D m_Rigidbody2D;
 	private bool m_FacingRight = true;  // For determining which way the player is currently facing.
 	private Vector3 m_Velocity = Vector3.zero;
 
@@ -78,7 +81,7 @@ public class CharacterController2D : MonoBehaviour
 	}
 
 	
-	public void Move(float move, bool crouch, bool jump)
+	public void Move(float move, bool crouch, bool jump, bool dash)
 	{
 		// If crouching, check to see if the character can stand up
 		if (!crouch)
@@ -146,7 +149,37 @@ public class CharacterController2D : MonoBehaviour
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
-	}
+
+        if (m_Grounded)
+        {
+            m_DashCount = 0;
+        }
+
+        if (dash)
+		{
+            if (!m_Grounded)
+            {
+                m_DashCount += 1;
+            }
+        }
+
+        if (dash && m_DashCount <= m_DashLimit)
+        {
+            if (Input.GetKey(KeyCode.A))
+            {
+				m_Rigidbody2D.AddForce(Vector2.right * -m_DashSpeed);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                m_Rigidbody2D.AddForce(Vector2.right * m_DashSpeed);
+            }
+            if (Input.GetKey(KeyCode.W))
+            {
+                m_Rigidbody2D.velocity = m_Rigidbody2D.velocity + Vector2.up * 5f;
+            }
+        }
+        
+    }
 
 
 	private void Flip()
