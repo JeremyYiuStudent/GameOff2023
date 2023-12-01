@@ -26,8 +26,10 @@ public class CharacterMovement : MonoBehaviour
                     jumping = true;
                 }
                 if(Input.GetButtonDown("Interact")){
-                    Debug.Log("Interacting");
                     trigger.Activate();
+                }
+                if(Input.GetButtonDown("Palette")){
+                    this.gameObject.GetComponent<ColorMixer>().Activate();
                 }
                 break;
             case controlStatus.dialogue:

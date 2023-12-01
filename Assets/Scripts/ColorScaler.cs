@@ -9,6 +9,8 @@ public class ColorScaler : MonoBehaviour
     private bool colorToneCountDown = true;
     private float greyScale = 1f;
 
+    private Vector3 checkPoint = new Vector3(0,0,0);
+
     private Animator animator;
     // Start is called before the first frame update
     void Start()
@@ -21,6 +23,10 @@ public class ColorScaler : MonoBehaviour
     {
         if(colorToneCountDown && greyScale > 0){
             greyScale-=changePerTick;
+            if(greyScale <= 0){
+                this.gameObject.transform.position = checkPoint;
+                greyScale = 1;
+            }
             updateGreyScale();
             StartCoroutine(colorCountDown(timePerTick));
         }
@@ -35,6 +41,7 @@ public class ColorScaler : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D other){
+        checkPoint = other.gameObject.transform.position;
         greyScale = 1;
     }
 }

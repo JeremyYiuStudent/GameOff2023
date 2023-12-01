@@ -1,52 +1,34 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-public class ColorMixer : MonoBehaviour
+public class ColorMixer : ActionTrigger
 {
-    private TextMeshProUGUI text;
-    private bool mixerUp = false;
+    public GameObject palette;
+    public GameObject paletteCenter;
     
+    private static Color activeColor;
     private int holder;
 
-    private string[] colorTable = {"Red", "Yellow", "Purple", "Green", "", "Cyan", "", "", "Blue"};
-    // Start is called before the first frame update
-    void Start()
-    {
-        text = this.gameObject.GetComponent<TextMeshProUGUI>();
+    private Color[] colorTable = {Color.red, Color.yellow, Color.magenta, Color.green, Color.white, Color.cyan, Color.white, Color.white, Color.blue};
+    public override void Activate(){
+        palette.SetActive(true);
+        CharacterMovement.currentStatus = CharacterMovement.controlStatus.readMenu;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.J)){
-            mixerUp = !mixerUp;
-        }
+    public override void Deactivate(){
+        palette.SetActive(false);
+        holder = 0;
+        CharacterMovement.currentStatus = CharacterMovement.controlStatus.movement;
     }
-    void OnGUI(){
-        if(mixerUp){
-            if(GUI.Button(new Rect(100,0,100,30), "Red")){
-                if(holder == 0){holder = 1;}
-                else{
-                    text.text = colorTable[holder*1-1];
-                    holder = 0; mixerUp = false;
-                }
-            }
-            if(GUI.Button(new Rect(200,0,100,30), "Green")){
-                if(holder == 0){holder = 2;}
-                else{
-                    text.text = colorTable[holder*2-1];
-                    holder = 0; mixerUp = false;
-                }
-            }
-            if(GUI.Button(new Rect(300,0,100,30), "Blue")){
-                if(holder == 0){holder = 3;}
-                else{
-                    text.text = colorTable[holder*3-1];
-                    holder = 0; mixerUp = false;
-                }
-            }
+    public void processInput(int input){
+        if(holder == 0){holder = input;}
+        else{
+            activeColor = colorTable[holder*input-1];
+            paletteCenter.GetComponent<Image>().color = activeColor;
+            holder = 0;
+            Deactivate();
         }
     }
 }
