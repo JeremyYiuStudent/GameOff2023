@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7be32e471aa540818ea425c3622cb39, type: 3}
+  m_Name: WIP2
+  m_EditorClassIdentifier: 
+  lines:
+  - text: 'If you have collected 2 hearts, then you have reached the end of the current
+      build of the game. '
+    speaker: 
+  - text: If not, then go back and look for the other heart!
+    speaker: 
+  - text: 'Thank you for playing! Hope you were able to enjoy this short little game. '
+    speaker: 
