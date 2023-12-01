@@ -69,7 +69,7 @@ public class CharacterController2D : MonoBehaviour
 		{
 			if (colliders[i].gameObject != gameObject)
 			{
-				jumpCounter = 1;
+				jumpCounter = DataHolder.maxJump;
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
