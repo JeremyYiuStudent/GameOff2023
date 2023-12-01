@@ -23,6 +23,6 @@ public class ItemController : ActionTrigger
     private void loadItem(){
         itemName.GetComponent<TextMeshProUGUI>().text = myItem.name;
         itemDesc.GetComponent<TextMeshProUGUI>().text = myItem.description;
-        itemSprite.GetComponent<Image>().sprite = myItem.image;
+        //itemSprite.GetComponent<Image>().sprite = myItem.image;
     }
 }
