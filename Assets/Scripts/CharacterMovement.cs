@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -9,6 +10,8 @@ public class CharacterMovement : MonoBehaviour
     private float horizontalInput;
     private bool jumping = false;
     private ActionTrigger trigger;
+
+    public GameObject triggerHint;
 
     public enum controlStatus {movement, dialogue, readMenu};
     public static controlStatus currentStatus = controlStatus.movement;
@@ -48,9 +51,16 @@ public class CharacterMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D col){
         Debug.Log("Trigger");
         if(col.gameObject.layer == 3){trigger = col.gameObject.GetComponent<ActionTrigger>();}
+        Debug.Log(trigger);
+        if(trigger.displayHint){
+            triggerHint.GetComponent<TextMeshProUGUI>().text = trigger.hintMessage;
+            triggerHint.SetActive(true);
+        }
     }
     void OnTriggerExit2D(Collider2D col){
         Debug.Log("Untrigger");
         if(col.gameObject.layer == 3){trigger = null;}
+        triggerHint.GetComponent<TextMeshProUGUI>().text = "";
+        triggerHint.SetActive(false);
     }
 }

@@ -521,8 +521,9 @@ GameObject:
   - component: {fileID: 145943445}
   - component: {fileID: 145943444}
   - component: {fileID: 145943443}
-  m_Layer: 0
-  m_Name: Circle (1)
+  - component: {fileID: 145943446}
+  m_Layer: 3
+  m_Name: Heart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -604,8 +605,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0a4446c924d2e4eac85138b4a36882ce, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -613,7 +613,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &145943445
@@ -631,6 +631,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &145943446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145943442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a1a4c816d93d4afb8c5f8ae16381d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  transformTo: {fileID: 21300000, guid: 0680057f473314766844428cdeecbf5a, type: 3}
+  color: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &189301131
 GameObject:
   m_ObjectHideFlags: 0
