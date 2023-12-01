@@ -11,4 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene2.unity
     guid: 8992046a2ce114d529905c331a3166f0
+  - enabled: 1
+    path: Assets/Scenes/PaintHouse.unity
+    guid: 6f4c8c370e66748daa37a757dbd92eff
+  - enabled: 1
+    path: Assets/Scenes/Office.unity
+    guid: ae222237f71a54e168f2fdedfb8f0a1c
   m_configObjects: {}
