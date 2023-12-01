@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -10,27 +11,56 @@ public class CharacterMovement : MonoBehaviour
     private bool jumping = false;
     private ActionTrigger trigger;
 
+    public GameObject triggerHint;
+
+    public enum controlStatus {movement, dialogue, readMenu};
+    public static controlStatus currentStatus = controlStatus.movement;
+
     // Update is called once per frame
     void Update()
     {
-        horizontalInput = Input.GetAxis("Horizontal") * 40f;
-        if(Input.GetButtonDown("Jump")){
-            jumping = true;
-        }
-        if(Input.GetButtonDown("Interact")){
-            trigger.Activate();
+        switch(currentStatus){
+            case controlStatus.movement:
+                horizontalInput = Input.GetAxis("Horizontal") * 40f;
+                if(Input.GetButtonDown("Jump")){
+                    jumping = true;
+                }
+                if(Input.GetButtonDown("Interact")){
+                    Debug.Log("Interacting");
+                    trigger.Activate();
+                }
+                break;
+            case controlStatus.dialogue:
+                if(Input.GetButtonDown("Interact")){
+                    (trigger as DialogueController).Next();
+                }
+                break;
+            case controlStatus.readMenu:
+                if(Input.GetButtonDown("Interact")){
+                    trigger.Deactivate();
+                }
+                break;
         }
     }
     void FixedUpdate(){
-        controller.Move(horizontalInput * Time.fixedDeltaTime,false,jumping);
-        jumping = false;
+        if(currentStatus == controlStatus.movement){
+            controller.Move(horizontalInput * Time.fixedDeltaTime,false,jumping);
+            jumping = false;
+        }
     }
     void OnTriggerEnter2D(Collider2D col){
-        Debug.Log("Trigger set");
+        Debug.Log("Trigger");
         if(col.gameObject.layer == 3){trigger = col.gameObject.GetComponent<ActionTrigger>();}
+        Debug.Log(trigger);
+        if(trigger.displayHint){
+            triggerHint.GetComponent<TextMeshProUGUI>().text = trigger.hintMessage;
+            triggerHint.SetActive(true);
+        }
     }
     void OnTriggerExit2D(Collider2D col){
-        Debug.Log("Trigger unset");
+        Debug.Log("Untrigger");
         if(col.gameObject.layer == 3){trigger = null;}
+        triggerHint.GetComponent<TextMeshProUGUI>().text = "";
+        triggerHint.SetActive(false);
     }
 }
