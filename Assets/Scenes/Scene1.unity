@@ -404,6 +404,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0979181f308204be0ac227e12d848af7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayHint: 1
+  hintMessage: 
   map: {fileID: 1291741808}
 --- !u!1 &95680858
 GameObject:
@@ -643,6 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a1a4c816d93d4afb8c5f8ae16381d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayHint: 1
+  hintMessage: 
   transformTo: {fileID: 21300000, guid: 0680057f473314766844428cdeecbf5a, type: 3}
   color: {r: 1, g: 0, b: 0, a: 0}
 --- !u!1 &189301131
@@ -1345,6 +1349,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f39699a5228ba4eab898765722fabf23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayHint: 1
+  hintMessage: 
   myDialogue: {fileID: 11400000, guid: 7f304a4b6665a461d8b259402a386820, type: 2}
   dialogueUI: {fileID: 1854982083}
   dialogueText: {fileID: 1608190962}
@@ -3659,6 +3665,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db492c46674647299331f1fff0ff85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  displayHint: 1
+  hintMessage: 
   myItem: {fileID: 11400000, guid: f0ec7562590b748c8897d7f08f0e5ccd, type: 2}
   itemUI: {fileID: 95680858}
   itemName: {fileID: 1110379182}
@@ -8544,6 +8552,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 1891015766}
+  triggerHint: {fileID: 0}
 --- !u!114 &1891015766
 MonoBehaviour:
   m_ObjectHideFlags: 0
