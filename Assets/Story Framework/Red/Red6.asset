@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9db2b6b72aec4916bf76fc3bb8dcc75, type: 3}
+  m_Name: Red6
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  name: Journal Entry
+  description: "I nearly lost control today again. I hate this feeling. I hate how
+    easily I give in to anger. I feel like I\u2019m not myself when I get too angry,
+    and that scares me. If only there was a way for me to not be so angry all the
+    time\u2026. What has being angry ever helped me with? "

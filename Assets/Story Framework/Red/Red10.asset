@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7be32e471aa540818ea425c3622cb39, type: 3}
+  m_Name: Red10
+  m_EditorClassIdentifier: 
+  lines:
+  - text: You gotta be careful around this area.
+    speaker: Old Grandma
+  - text: 'I was walking in that alley yesterday, and this purse snatcher ran past
+      me and stole my purse! '
+    speaker: Old Grandma
+  - text: 'I tried to chase them down and screamed for help. '
+    speaker: Old Grandma
+  - text: 'But this kid just sat there lifelessly. '
+    speaker: Old Grandma
+  - text: "He could have blocked that thief, but he didn\u2019t. "
+    speaker: Old Grandma
+  - text: 'Sigh. The youngsters these days. '
+    speaker: Old Grandma
+  - text: 'I would have been furious seeing someone steal from an old lady like me
+      if I were in my younger days. '
+    speaker: Old Grandma

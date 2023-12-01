@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9db2b6b72aec4916bf76fc3bb8dcc75, type: 3}
+  m_Name: Green2
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  name: Faux Tree
+  description: This tree is made of plastic. The interior designer insisted on a
+    real tree, but it brought in insects and it smelled bad, so it was replaced with
+    this. It still looks like the original tree though, but at least insects don't
+    eat it. There are branches pulled off because kids tore up the leaves and the
+    managers never replaced it.

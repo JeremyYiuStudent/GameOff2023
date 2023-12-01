@@ -9,6 +9,7 @@ public class SceneTraverser : ActionTrigger
     public override void Activate()
     {
         SceneManager.LoadScene(whereTo);
+        DataHolder.maxJump = 1;
     }
     public override void Deactivate(){}
 }

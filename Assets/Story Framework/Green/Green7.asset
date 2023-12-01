@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9db2b6b72aec4916bf76fc3bb8dcc75, type: 3}
+  m_Name: Green7
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  name: Satellite
+  description: 'This is a monitoring satellite. It uses its cameras onboard to monitor
+    the surface, and microwave transmitters to send said data down to the surface
+    for use in satellite imaging and mapping, along with other purposes. This information
+    is freely available for the public to use as a public utility and good. It powers
+    itself with solar panels, impressive for such a large wonder of modern science.
+    Now, it has found a new frontier of which to explore and image: the floor of
+    an office building, which it captures in picture-perfect accuracy, down to the
+    thousandth of an inch.'

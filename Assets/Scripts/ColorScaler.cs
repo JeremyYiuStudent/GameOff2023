@@ -21,7 +21,7 @@ public class ColorScaler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(colorToneCountDown && greyScale > 0){
+        if(colorToneCountDown && greyScale > 0 && CharacterMovement.currentStatus == CharacterMovement.controlStatus.movement){
             greyScale-=changePerTick;
             if(greyScale <= 0){
                 this.gameObject.transform.position = checkPoint;

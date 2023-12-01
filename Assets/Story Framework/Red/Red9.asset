@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9db2b6b72aec4916bf76fc3bb8dcc75, type: 3}
+  m_Name: Red9
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  name: Journal Entry
+  description: "<i>This journal entry looks recent.</i><br>I lost control today\u2026
+    Oh god. I shouldn\u2019t have hurt John like that. I mean, he\u2019s a dick,
+    but he doesn\u2019t deserve that. I could have just gotten a teacher to handle
+    it. The look of fear in his eyes. <br>It\u2019s like he was looking at a monster. 
+    <br>I knew this would happen one day. I knew it. This anger of mine is going
+    to fuck me up. I don\u2019t want it. Please, I don\u2019t want to feel angry
+    anymore.  "

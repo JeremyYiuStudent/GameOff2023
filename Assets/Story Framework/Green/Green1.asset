@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7be32e471aa540818ea425c3622cb39, type: 3}
+  m_Name: Green1
+  m_EditorClassIdentifier: 
+  lines:
+  - text: Hello and welcome, we regret to inform you that the upper floors of Denver
+      Communications Technology Industries Offices are no longer in service.
+    speaker: Receptionist
+  - text: As you may be aware the upper floors were recently impacted.
+    speaker: Receptionist
+  - text: We remind you that we are currently in the process of cleaning up the building,
+      you may enter the lower floors but for now please do not access the floors
+      above and including floor 35.
+    speaker: Receptionist
+  - text: As they are potentially hazardous, while the building is structurally sound
+      please do not attempt to access the machine.
+    speaker: Receptionist
+  - text: Thank you for your cooperation with Denver Communications Technology Industries
+      protocol and we appreciate your business.
+    speaker: Receptionist
+  - text: Oh, are you new here? Are you here to survey the upper floors?
+    speaker: Receptionist
+  - text: They said they would have some guys come in this week. We haven't had anyone
+      come look at the wreckage in years, so I'm surprised Gabe still gives a shit.
+    speaker: Receptionist
+  - text: You can take the elevator straight to the top. From there it's all on you.
+    speaker: Receptionist
+  - text: 'The wreck has been there for... I believe now seven years? '
+    speaker: Receptionist
+  - text: Upper management has never really dealt with it, they were more interested
+      in keeping business rolling, and construction costs always balloon. Or something
+      idk.
+    speaker: Receptionist
+  - text: 'Managers are more concerned with leasing the offices for mega cheap even
+      though they''re a safety hazard. '
+    speaker: Receptionist
+  - text: State hasn't done shit because they're too busy handling crime or corruption
+      or taxes or redistricting or whatever the fuck they're on about this week.
+    speaker: Receptionist
+  - text: 'Oh right, the satellite- yeah, it''s been there for a while. '
+    speaker: Receptionist
+  - text: 'I mean even with the hole in the roof the building''s been standing for
+      7 years so we''re probably gonna be fine. '
+    speaker: Receptionist
+  - text: It's like a hundred and fifty years old, it can survive a little satellite
+      through the roof here and there, ya know?
+    speaker: Receptionist
+  - text: It shouldn't be hazardous or anything, but tread carefully, obviously.
+    speaker: Receptionist
+  - text: Other than that, good luck! Don't die!
+    speaker: Receptionist

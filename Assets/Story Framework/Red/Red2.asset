@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9db2b6b72aec4916bf76fc3bb8dcc75, type: 3}
+  m_Name: Red2
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  name: Videotape
+  description: "The security footage of a school. A kid pinned another kid down and
+    was beating up the other. The aggressor\u2019s face was furious, almost red from
+    how blood-shot it was. The victim was getting punched repeatedly in the face,
+    with blood dripping down his nostrils. "

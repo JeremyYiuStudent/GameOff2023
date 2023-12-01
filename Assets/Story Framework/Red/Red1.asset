@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7be32e471aa540818ea425c3622cb39, type: 3}
+  m_Name: Red1
+  m_EditorClassIdentifier: 
+  lines:
+  - text: 'Excuse me. '
+    speaker: Woman
+  - text: 'Have you seen a middle school boy, around this tall, brown hair, always
+      wearing a red jacket? '
+    speaker: Woman
+  - text: "He\u2019s a student of mine. He went missing a couple of days ago. "
+    speaker: Woman
+  - text: "I thought maybe I could take a stroll around town and see if anyone has
+      seen him\u2026. "
+    speaker: Woman
+  - text: "He-\u2026 He\u2019s a good boy at heart. He\u2019s just\u2026 sometimes
+      a bit too passionate about things. "
+    speaker: Woman
+  - text: 'Well, if you see him, could you let him know his teacher and family is
+      worried about him? '
+    speaker: Woman

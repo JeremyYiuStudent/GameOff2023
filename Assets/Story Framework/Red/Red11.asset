@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7be32e471aa540818ea425c3622cb39, type: 3}
+  m_Name: Red11
+  m_EditorClassIdentifier: 
+  lines:
+  - text: "I-is that\u2026 No, I don\u2019t want that back. "
+    speaker: Henry Sills
+  - text: 'What has being angry ever done for me? '
+    speaker: Henry Sills
+  - text: 'I would be better off never feeling anger in my life. '
+    speaker: Henry Sills
+  - text: "This emotion\u2026 it\u2019s useless. "
+    speaker: Henry Sills
+  - text: "Please, don\u2019t do it. "
+    speaker: Henry Sills

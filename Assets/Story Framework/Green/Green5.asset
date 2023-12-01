@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9db2b6b72aec4916bf76fc3bb8dcc75, type: 3}
+  m_Name: Green5
+  m_EditorClassIdentifier: 
+  image: {fileID: 0}
+  name: Bookcase
+  description: A bookcase full of books neatly organized into categories and by date.
+    The first few rows are collections of accounting documents, annual reports, inventory
+    binders, and balance sheets, all of which pertain to Denver Communications Technology
+    Industries and its clients. The final row is mostly empty, except for a few textbooks
+    covering physics, electrophysics, electromagnetic physics, single-variable calculus,
+    and computer networking.
