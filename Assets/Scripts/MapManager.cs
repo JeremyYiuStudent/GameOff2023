@@ -5,8 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class MapManager : MonoBehaviour
 {
-    private string[] sceneList = {"Scene1", "Scene2"};
-    public void LoadScene(int x){
-        SceneManager.LoadScene(sceneList[x]);
+    public void LoadScene(string s){
+        SceneManager.LoadScene(s);
+    }
+    public void ExitApp(){
+        Application.Quit();
     }
 }
